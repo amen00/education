@@ -1,0 +1,20 @@
+<!-- 
+1- Note that the code is on the basis of first come first served. To illustrate that take the <img> tag and put it as the first tag (i.e. before all buttons)
+
+2- Illustrate how to work with dirictories by putting the pictures in the same folder of the HTML file
+
+3- Illustrate the idea of tag ID <img ID="MyImg">
+-->
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- Strat the code for turning the light on -->
+  
+    <button onclick="document.getElementById('MyImg').src='img/example1/pic_bulbon.gif'">Turn on the light</button>
+    
+    <img id="MyImg" src="img/example1/pic_bulboff.gif" style="width:100px">
+    
+    <!-- Strat the code for turning the light off -->
+    <button onclick="document.getElementById('MyImg').src='img/example1/pic_bulboff.gif'">Turn off the light</button>  
+</body>
+</html>

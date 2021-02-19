@@ -1,0 +1,57 @@
+<!--https://jsfiddle.net/8c6tw2pv/-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #table-container {
+                border: solid 0px;
+                border-spacing: 0px;
+                width: 100%;
+                height: 500px;
+                font-size: 35px;
+                text-align: center;
+            }
+
+            * {box-sizing: border-box;}    
+
+            #header, #footer {
+                background: #666;
+                padding: 20px 20px;
+                font-size: 20px;
+                height: 20%;
+            }
+
+            /* Create two columns/boxes that floats next to each other */
+            #sidebar {
+                background: #ccc;
+                width: 20%;
+                height: 20%; /* only for demonstration, should be removed */
+                padding: 20px 0;
+                font-size: 20px;
+            }
+
+            #main {
+                background: #f1f1f1;
+                width: 60%;
+                height: 60%; /* only for demonstration, should be removed */
+                padding: 20px 0;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <Table id="table-container">
+            <tr id="header">
+                <td colspan="3">Logo</td>
+            </tr>
+            <tr>
+                <td id="sidebar">Left menu</td>
+                <td id="main">Main</td>
+                <td id="sidebar">Right menu</td>
+            </tr>
+            <tr>
+                <td id="footer" colspan="3">Footer</td>
+            </tr>
+        </Table>
+    </body>
+</html>

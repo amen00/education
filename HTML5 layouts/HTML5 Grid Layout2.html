@@ -1,0 +1,53 @@
+<!--https://jsfiddle.net/8c6tw2pv/-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-gap: 0px;
+                padding: 0px;
+                grid-template-columns: 1fr 3fr 1fr; /* The number of layout columns is determined by the number of values */
+                grid-template-rows: auto 150% auto; 
+                /*fr is calculated based on the remaining space when combined with other length values (e.g. rem, px, %).
+                In this example, (grid-template-columns: 3rem 25% 1fr 2fr):
+                1fr = ((width of grid) - (3rem) - (25% of width of grid)) / 3 */
+            }
+
+
+
+
+
+            .grid-container > div {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 20px;
+            }
+
+            /*Positioning Items by Grid Line Numbers*/
+            /*This is to merge the header and footer cells*/
+            .header, .footer {
+                grid-column-start: 1; /*This means the cell will start from line 1 (i.e. far left)*/
+                grid-column-end: 4; /*This means the cell will end in line 4 (i.e. far right)*/
+            }
+
+            * {box-sizing: border-box;}
+            .header{background-color: #666;}
+            .sidebar_left{background-color: #ccc;}
+            .main{background-color:  #f1f1f1;}
+            .sidebar_right{background-color: #ccc;}
+            .footer{background-color: #666;}
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="header">Logo</div>
+            <div class="sidebar_left">Left menu</div>
+            <div class="main">Main</div>  
+            <div class="sidebar_right">Right menu</div> 
+            <div class="footer">Footer</div>
+        </div>
+
+    </body>
+</html>
