@@ -32,9 +32,10 @@ function checkCookie() {
     alert("Welcome again " + user + "\n" + "Your age is " + age);
   } else {
      user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
+     age = prompt("Please enter your age:","");
+     if (user != "" && user != null && age != "" && age != null {
        setCookie("username", user, 30);
-       setCookie("age", "41", 30);
+       setCookie("age", age, 30);
      }
   }
 }
