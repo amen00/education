@@ -27,13 +27,14 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("username");
-  if (user != "") {
+  let user = getCookie("age");
+  if (user != "" && age != "") {
     alert("Welcome again " + user + "Your age is" + Age);
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
-       setCookie("Age", "41", 30);
+       setCookie("age", "41", 30);
      }
   }
 }
